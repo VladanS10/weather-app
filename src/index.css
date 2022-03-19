@@ -1,3 +1,101 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p{
+  font-size: 20px;
+}
+h1 {
+  font-size: 60px;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.App::before{
+  content: '';
+  background: url("assets/sunset.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.App .search{
+  text-align: center;
+  padding: 30px;
+}
+.App input {
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+::placeholder{
+  color: #f8f8f8;
+}
+.container {
+  max-width: 700px;
+  height: 300px;
+  margin: auto;
+  padding: 0 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top{
+  width: 100%;
+  margin: 10px auto;
+}
+
+.description{
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+}
+
+.bottom{ 
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+} 
+.fiveDays{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 100px;
+}
+.daily{
+  margin: 10px 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .bottom {
+    flex-direction: column;
+  }
+  .feels, .humidity, .wind{
+    padding: 10px 0;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +105,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
