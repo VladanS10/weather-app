@@ -119,7 +119,7 @@ function App() {
   }
 
   return (
-    <div className="App" id='mainBlock' style={{background: `url(${backgroundImage})`, color}} key={backgroundImage}>
+    <div className="App" id='mainBlock' style={{background: `url(${backgroundImage}) no-repeat center center/cover`, color}} key={backgroundImage}>
       <div className="search">
         <input
         style={{color}} 
