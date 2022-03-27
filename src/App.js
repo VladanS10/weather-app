@@ -47,6 +47,10 @@ function App() {
         setBackgroundImage('./assets/snow.jpg')
         setColor('black') 
         break;
+        case 'Fog':
+          setBackgroundImage('./assets/fog.jpg')
+          setColor('black') 
+          break;
           default:
             setBackgroundImage('./assets/R.jpg')
             setColor('white') 
